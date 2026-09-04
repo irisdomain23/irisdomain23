@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="200" viewBox="0 0 880 200">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0d1117"/>
+      <stop offset="1" stop-color="#161b22"/>
+    </linearGradient>
+    <linearGradient id="reactGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#61DAFB"/>
+      <stop offset="1" stop-color="#2563eb"/>
+    </linearGradient>
+  </defs>
+
+  <!-- background -->
+  <rect width="880" height="200" fill="url(#bg)"/>
+
+  <!-- DOM tree nodes (left side, animated) -->
+  <g font-family="monospace" font-size="11" fill="#484f58">
+    <text x="24" y="24">&lt;div&gt;</text>
+    <text x="44" y="44" opacity="0.7">&lt;header&gt;</text>
+    <text x="64" y="64" opacity="0.5">&lt;nav&gt;</text>
+    <text x="44" y="84" opacity="0.7">&lt;main&gt;</text>
+    <text x="64" y="104" opacity="0.5">&lt;section&gt;</text>
+    <text x="84" y="124" opacity="0.4">&lt;button&gt;</text>
+    <text x="44" y="144" opacity="0.7">&lt;footer&gt;</text>
+    <!-- pulse on button node -->
+    <rect x="80" y="112" width="70" height="16" rx="2" fill="none" stroke="#61DAFB" stroke-width="1" opacity="0">
+      <animate attributeName="opacity" values="0;0.8;0" dur="3s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- component blocks (right area, reorganizing) -->
+  <g>
+    <!-- block 1 -->
+    <rect x="680" y="30" width="60" height="40" rx="6" fill="#61DAFB" opacity="0.15" stroke="#61DAFB" stroke-width="1.5">
+      <animate attributeName="y" values="30;30;50;50;30" dur="4s" repeatCount="indefinite"/>
+      <animate attributeName="x" values="680;680;720;720;680" dur="4s" repeatCount="indefinite"/>
+    </rect>
+    <!-- block 2 -->
+    <rect x="750" y="30" width="60" height="40" rx="6" fill="#2563eb" opacity="0.15" stroke="#2563eb" stroke-width="1.5">
+      <animate attributeName="y" values="30;50;50;30;30" dur="4s" repeatCount="indefinite"/>
+      <animate attributeName="x" values="750;720;680;680;750" dur="4s" repeatCount="indefinite"/>
+    </rect>
+    <!-- block 3 -->
+    <rect x="680" y="80" width="60" height="40" rx="6" fill="#61DAFB" opacity="0.1" stroke="#61DAFB" stroke-width="1" stroke-dasharray="4 2">
+      <animate attributeName="y" values="80;80;100;100;80" dur="4s" begin="0.5s" repeatCount="indefinite"/>
+    </rect>
+    <!-- block 4 -->
+    <rect x="750" y="80" width="60" height="40" rx="6" fill="#2563eb" opacity="0.1" stroke="#2563eb" stroke-width="1" stroke-dasharray="4 2">
+      <animate attributeName="y" values="80;100;100;80;80" dur="4s" begin="0.5s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- focus ring (jumping) -->
+  <rect x="300" y="55" width="120" height="32" rx="6" fill="none" stroke="#61DAFB" stroke-width="2.5">
+    <animate attributeName="x" values="300;450;600;300" dur="5s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0;1;1;0" dur="5s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- contrast toggle indicator -->
+  <g>
+    <circle cx="200" cy="155" r="12" fill="#0d1117" stroke="#484f58" stroke-width="1"/>
+    <circle cx="200" cy="155" r="6" fill="#61DAFB" opacity="0.8">
+      <animate attributeName="fill" values="#61DAFB;#2563eb;#61DAFB" dur="2s" repeatCount="indefinite"/>
+      <animate attributeName="r" values="6;8;6" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <text x="220" y="159" font-family="monospace" font-size="10" fill="#484f58">contrast</text>
+  </g>
+
+  <!-- name -->
+  <text x="300" y="80" font-family="system-ui, sans-serif" font-size="28" font-weight="700" fill="url(#reactGrad)">Iris Lin</text>
+
+  <!-- role -->
+  <text x="300" y="105" font-family="system-ui, sans-serif" font-size="14" fill="#8b949e">Front-End Engineer &#183; Accessibility</text>
+
+  <!-- tags -->
+  <text x="300" y="130" font-family="monospace" font-size="11" fill="#484f58">React &#183; TypeScript &#183; WCAG 2.2 &#183; Focus Management &#183; CSS Custom Properties</text>
+
+  <!-- blinking cursor bottom right -->
+  <rect x="844" y="176" width="8" height="16" fill="#61DAFB">
+    <animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.5;0.5;1" dur="1s" repeatCount="indefinite"/>
+  </rect>
+</svg>
