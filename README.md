@@ -1,6 +1,19 @@
-# Iris Lin
+<p align="center">
+  <img src="https://raw.githubusercontent.com/irisdomain23/irisdomain23/main/assets/header.svg" alt="Iris Lin — Front-End Engineer · Accessibility" width="880"/>
+</p>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/irisdomain23/irisdomain23/main/assets/now.svg" alt="now" width="720"/>
+</p>
+<p align="center">
+  <img src="https://img.shields.io/badge/React-20232A?style=flat&logo=react&logoColor=61DAFB" height="22"/>
+  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=typescript&logoColor=white" height="22"/>
+  <img src="https://img.shields.io/badge/CSS-1572B6?style=flat&logo=css&logoColor=white" height="22"/>
+  <img src="https://img.shields.io/badge/WCAG_2.2-0052CC?style=flat&logo=w3c&logoColor=white" height="22"/>
+  <img src="https://img.shields.io/badge/Vite-646CFF?style=flat&logo=vite&logoColor=white" height="22"/>
+  <img src="https://img.shields.io/badge/Vitest-6E9F18?style=flat&logo=vitest&logoColor=white" height="22"/>
+</p>
 
-![React](https://img.shields.io/badge/React-20232A?style=flat&logo=react&logoColor=61DAFB) ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=typescript&logoColor=white) ![CSS](https://img.shields.io/badge/CSS-1572B6?style=flat&logo=css&logoColor=white)
+---
 
 Front-end engineer in Singapore. I build design systems, and most of my time goes to the parts that get skipped — focus order, empty states, and what a component does when the data never arrives.
 
@@ -48,6 +61,19 @@ designers and PMs who are not going to install anything.
 Layout, gradient, and dark-mode snippets I got tired of re-deriving, kept in one place with
 notes on when each one breaks.
 
+### [react-hooks-lib](https://github.com/irisdomain23/react-hooks-lib)
+
+Three hooks I use across every project — `useDebounce`, `useLocalStorage`, `useMediaQuery`.
+Typed, dependency-free, small enough to read in one sitting. The ones I copy into a new
+codebase before the first component is written.
+
+### [focus-trap-util](https://github.com/irisdomain23/focus-trap-util)
+
+A focus trap for dialogs and overlays — Tab and Shift+Tab cycle within the container's
+focusable elements, focus moves to the first element on mount, and the cleanup function
+restores normal tab order when the overlay closes. If a role exists in the DOM, it should
+be reachable by keyboard.
+
 ## How I work
 
 - Read the spec before the blog post. MDN and the WCAG *Understanding* pages settle most arguments.
@@ -63,6 +89,16 @@ notes on when each one breaks.
   with a fallback path for browsers that are not there yet
 - Working through the success criteria that landed in WCAG 2.2 — target size and focus
   appearance are the ones changing our components the most
+
+## 📊 Activity
+
+<p align="center">
+  <img height="160" src="https://github-readme-stats.vercel.app/api?username=irisdomain23&show_icons=true&theme=transparent&hide_border=true&count_private=true"/>
+  <img height="160" src="https://github-readme-stats.vercel.app/api/top-langs/?username=irisdomain23&layout=compact&theme=transparent&hide_border=true"/>
+</p>
+<p align="center">
+  <img width="720" src="https://github-readme-activity-graph.vercel.app/graph?username=irisdomain23&theme=github-compact&hide_border=true&radius=8"/>
+</p>
 
 ## Contact
 
