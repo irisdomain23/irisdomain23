@@ -1,82 +1,121 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="880" height="200" viewBox="0 0 880 200">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 200" width="880" height="200">
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#0d1117"/>
       <stop offset="1" stop-color="#161b22"/>
     </linearGradient>
-    <linearGradient id="reactGrad" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#61DAFB"/>
-      <stop offset="1" stop-color="#2563eb"/>
+    <linearGradient id="fadeR" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#0d1117" stop-opacity="0"/>
+      <stop offset="1" stop-color="#0d1117" stop-opacity="0.55"/>
     </linearGradient>
   </defs>
 
-  <!-- background -->
   <rect width="880" height="200" fill="url(#bg)"/>
 
-  <!-- DOM tree nodes (left side, animated) -->
-  <g font-family="monospace" font-size="11" fill="#484f58">
-    <text x="24" y="24">&lt;div&gt;</text>
-    <text x="44" y="44" opacity="0.7">&lt;header&gt;</text>
-    <text x="64" y="64" opacity="0.5">&lt;nav&gt;</text>
-    <text x="44" y="84" opacity="0.7">&lt;main&gt;</text>
-    <text x="64" y="104" opacity="0.5">&lt;section&gt;</text>
-    <text x="84" y="124" opacity="0.4">&lt;button&gt;</text>
-    <text x="44" y="144" opacity="0.7">&lt;footer&gt;</text>
-    <!-- pulse on button node -->
-    <rect x="80" y="112" width="70" height="16" rx="2" fill="none" stroke="#61DAFB" stroke-width="1" opacity="0">
-      <animate attributeName="opacity" values="0;0.8;0" dur="3s" repeatCount="indefinite"/>
+  <!-- 1px guide lines -->
+  <g stroke="#21262d" stroke-width="1">
+    <line x1="0" y1="36" x2="880" y2="36"/>
+    <line x1="0" y1="164" x2="880" y2="164"/>
+    <line x1="540" y1="36" x2="540" y2="164"/>
+    <line x1="40" y1="36" x2="40" y2="164" opacity="0.5"/>
+  </g>
+  <rect x="540" y="36" width="340" height="128" fill="url(#fadeR)"/>
+
+  <!-- meta labels -->
+  <text x="40" y="24" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="10" fill="#7d8590" letter-spacing="1">
+    <tspan fill="#58a6a6"></tspan> iris-lin · main
+  </text>
+  <text x="840" y="24" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="10" fill="#7d8590" letter-spacing="1">a11y: AA</text>
+
+  <!-- Left: identity -->
+  <text x="64" y="92" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="38" font-weight="600" fill="#e6edf3" letter-spacing="0.5">Iris Lin</text>
+  <text x="66" y="120" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#61DAFB" letter-spacing="3">FRONTEND ENGINEER · ACCESSIBILITY</text>
+  <text x="66" y="146" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11" fill="#7d8590" letter-spacing="0.5">React · TypeScript · a11y · CSS · Testing Library</text>
+
+  <!-- Right: component tree -->
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, monospace">
+    <!-- connectors -->
+    <g stroke="#21262d" stroke-width="1" fill="none">
+      <path d="M660 60 v14 h-46 v14"/>
+      <path d="M660 60 v14 h46 v14"/>
+      <path d="M614 100 v10"/>
+      <path d="M706 100 v10"/>
+    </g>
+
+    <!-- root node -->
+    <g>
+      <rect x="636" y="44" width="48" height="18" rx="3" fill="#161b22" stroke="#58a6a6" stroke-width="1"/>
+      <text x="660" y="56.5" text-anchor="middle" font-size="9" fill="#e6edf3">&lt;App/&gt;</text>
+      <rect x="636" y="44" width="48" height="18" rx="3" fill="#61DAFB" opacity="0">
+        <animate attributeName="opacity" values="0;0.12;0;0;0;0" keyTimes="0;0.12;0.22;0.5;0.8;1" dur="8s" repeatCount="indefinite"/>
+      </rect>
+    </g>
+
+    <!-- child nodes -->
+    <g>
+      <rect x="590" y="90" width="48" height="18" rx="3" fill="#161b22" stroke="#58a6a6" stroke-width="1"/>
+      <text x="614" y="102.5" text-anchor="middle" font-size="9" fill="#e6edf3">&lt;Nav/&gt;</text>
+      <rect x="590" y="90" width="48" height="18" rx="3" fill="#61DAFB" opacity="0">
+        <animate attributeName="opacity" values="0;0;0.12;0;0" keyTimes="0;0.2;0.32;0.45;1" dur="8s" repeatCount="indefinite"/>
+      </rect>
+    </g>
+    <g>
+      <rect x="682" y="90" width="56" height="18" rx="3" fill="#161b22" stroke="#58a6a6" stroke-width="1"/>
+      <text x="710" y="102.5" text-anchor="middle" font-size="9" fill="#e6edf3">&lt;Main/&gt;</text>
+      <rect x="682" y="90" width="56" height="18" rx="3" fill="#61DAFB" opacity="0">
+        <animate attributeName="opacity" values="0;0;0.12;0;0" keyTimes="0;0.45;0.57;0.7;1" dur="8s" repeatCount="indefinite"/>
+      </rect>
+    </g>
+
+    <!-- leaf nodes -->
+    <g>
+      <rect x="592" y="122" width="44" height="16" rx="3" fill="#161b22" stroke="#21262d" stroke-width="1"/>
+      <text x="614" y="133.5" text-anchor="middle" font-size="8" fill="#7d8590">button</text>
+    </g>
+    <g>
+      <rect x="686" y="122" width="44" height="16" rx="3" fill="#161b22" stroke="#21262d" stroke-width="1"/>
+      <text x="708" y="133.5" text-anchor="middle" font-size="8" fill="#7d8590">form</text>
+    </g>
+
+    <!-- traveling a11y focus ring -->
+    <rect x="636" y="44" width="48" height="18" rx="4" fill="none" stroke="#61DAFB" stroke-width="1.5" stroke-dasharray="4 3" opacity="0.9">
+      <animate attributeName="x" values="636;636;590;590;682;682;636" keyTimes="0;0.22;0.28;0.5;0.56;0.85;1" dur="8s" repeatCount="indefinite"/>
+      <animate attributeName="y" values="44;44;90;90;90;90;44" keyTimes="0;0.22;0.28;0.5;0.56;0.85;1" dur="8s" repeatCount="indefinite"/>
+      <animate attributeName="width" values="48;48;48;48;56;56;48" keyTimes="0;0.22;0.28;0.5;0.56;0.85;1" dur="8s" repeatCount="indefinite"/>
+      <animate attributeName="stroke-dashoffset" values="0;-14" dur="2s" repeatCount="indefinite"/>
     </rect>
   </g>
 
-  <!-- component blocks (right area, reorganizing) -->
-  <g>
-    <!-- block 1 -->
-    <rect x="680" y="30" width="60" height="40" rx="6" fill="#61DAFB" opacity="0.15" stroke="#61DAFB" stroke-width="1.5">
-      <animate attributeName="y" values="30;30;50;50;30" dur="4s" repeatCount="indefinite"/>
-      <animate attributeName="x" values="680;680;720;720;680" dur="4s" repeatCount="indefinite"/>
-    </rect>
-    <!-- block 2 -->
-    <rect x="750" y="30" width="60" height="40" rx="6" fill="#2563eb" opacity="0.15" stroke="#2563eb" stroke-width="1.5">
-      <animate attributeName="y" values="30;50;50;30;30" dur="4s" repeatCount="indefinite"/>
-      <animate attributeName="x" values="750;720;680;680;750" dur="4s" repeatCount="indefinite"/>
-    </rect>
-    <!-- block 3 -->
-    <rect x="680" y="80" width="60" height="40" rx="6" fill="#61DAFB" opacity="0.1" stroke="#61DAFB" stroke-width="1" stroke-dasharray="4 2">
-      <animate attributeName="y" values="80;80;100;100;80" dur="4s" begin="0.5s" repeatCount="indefinite"/>
-    </rect>
-    <!-- block 4 -->
-    <rect x="750" y="80" width="60" height="40" rx="6" fill="#2563eb" opacity="0.1" stroke="#2563eb" stroke-width="1" stroke-dasharray="4 2">
-      <animate attributeName="y" values="80;100;100;80;80" dur="4s" begin="0.5s" repeatCount="indefinite"/>
-    </rect>
-  </g>
-
-  <!-- focus ring (jumping) -->
-  <rect x="300" y="55" width="120" height="32" rx="6" fill="none" stroke="#61DAFB" stroke-width="2.5">
-    <animate attributeName="x" values="300;450;600;300" dur="5s" repeatCount="indefinite"/>
-    <animate attributeName="opacity" values="0;1;1;0" dur="5s" repeatCount="indefinite"/>
-  </rect>
-
-  <!-- contrast toggle indicator -->
-  <g>
-    <circle cx="200" cy="155" r="12" fill="#0d1117" stroke="#484f58" stroke-width="1"/>
-    <circle cx="200" cy="155" r="6" fill="#61DAFB" opacity="0.8">
-      <animate attributeName="fill" values="#61DAFB;#2563eb;#61DAFB" dur="2s" repeatCount="indefinite"/>
-      <animate attributeName="r" values="6;8;6" dur="2s" repeatCount="indefinite"/>
+  <!-- pulsing React atom -->
+  <g transform="translate(798,88)" stroke="#61DAFB" fill="none" stroke-width="1.2">
+    <g opacity="0.85">
+      <ellipse rx="26" ry="10"/>
+      <ellipse rx="26" ry="10" transform="rotate(60)"/>
+      <ellipse rx="26" ry="10" transform="rotate(120)"/>
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="24s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.85;0.55;0.85" dur="4s" repeatCount="indefinite"/>
+    </g>
+    <circle r="2.6" fill="#61DAFB" stroke="none">
+      <animate attributeName="r" values="2.2;3.2;2.2" dur="4s" repeatCount="indefinite"/>
     </circle>
-    <text x="220" y="159" font-family="monospace" font-size="10" fill="#484f58">contrast</text>
   </g>
 
-  <!-- name -->
-  <text x="300" y="80" font-family="system-ui, sans-serif" font-size="28" font-weight="700" fill="url(#reactGrad)">Iris Lin</text>
+  <!-- DOM layers stacking, bottom-left of right panel -->
+  <g fill="none" stroke="#58a6a6" stroke-width="1" opacity="0.7">
+    <rect x="568" y="146" width="34" height="10" rx="2" opacity="0.35">
+      <animate attributeName="y" values="146;142;146" dur="5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.35;0.6;0.35" dur="5s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="572" y="150" width="34" height="10" rx="2" opacity="0.5">
+      <animate attributeName="y" values="150;147;150" dur="5s" begin="0.4s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.5;0.75;0.5" dur="5s" begin="0.4s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="576" y="154" width="34" height="10" rx="2" opacity="0.65"/>
+  </g>
 
-  <!-- role -->
-  <text x="300" y="105" font-family="system-ui, sans-serif" font-size="14" fill="#8b949e">Front-End Engineer &#183; Accessibility</text>
-
-  <!-- tags -->
-  <text x="300" y="130" font-family="monospace" font-size="11" fill="#484f58">React &#183; TypeScript &#183; WCAG 2.2 &#183; Focus Management &#183; CSS Custom Properties</text>
-
-  <!-- blinking cursor bottom right -->
-  <rect x="844" y="176" width="8" height="16" fill="#61DAFB">
-    <animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.5;0.5;1" dur="1s" repeatCount="indefinite"/>
+  <!-- bottom-right: version + blinking cursor -->
+  <text x="796" y="186" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="10" fill="#7d8590">v1.4.2</text>
+  <rect x="806" y="176" width="7" height="12" fill="#61DAFB" opacity="0.9">
+    <animate attributeName="opacity" values="0.9;0.9;0;0;0.9" keyTimes="0;0.45;0.5;0.95;1" dur="1.1s" repeatCount="indefinite"/>
   </rect>
 </svg>
