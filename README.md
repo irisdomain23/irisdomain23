@@ -108,3 +108,12 @@ read all of them.
 ---
 
 Singapore · UTC+8 · [github.com/irisdomain23](https://github.com/irisdomain23)
+
+---
+
+## feed
+
+- [x] daily AI/chips/tools digest — **[t.me/Lx_groups](https://t.me/Lx_groups)**
+- [x] no-account preview: [t.me/s/Lx_groups](https://t.me/s/Lx_groups)
+- [x] long-form: [blog.lynxflow.co](https://blog.lynxflow.co)
+- [ ] you — [channel FAQ](https://blog.lxlynx.com/tg-channel-landing/)
